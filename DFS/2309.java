@@ -6,7 +6,7 @@ public class Main {
 	static StringBuilder sb = new StringBuilder();
 	static int[] dwarf = new int[9];
 	static boolean chk;
-	static boolean[] number = new boolean[101];
+	//static boolean[] number = new boolean[101];
 	
 	private static void func(int v, int cnt, String s, int sum)
 	{
