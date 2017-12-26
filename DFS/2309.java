@@ -10,8 +10,8 @@ public class Main {
 	
 	private static void func(int v, int cnt, String s, int sum)
 	{
-		int idx = dwarf[v];
-		number[idx] = true;
+		//int idx = dwarf[v];
+		//number[idx] = true;
 		
 		if(cnt == 7)
 		{
@@ -31,7 +31,7 @@ public class Main {
 				func(i, cnt+1, s+dwarf[i]+"\n", sum+dwarf[i]);
 			}
 		}
-		number[idx] = false;
+		//number[idx] = false;
 	}
 	
 	public static void main(String[] args)
