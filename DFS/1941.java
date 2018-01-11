@@ -30,7 +30,7 @@ public class Main {
 		}
 	}
 	private static void find(String[] arr)
-	{
+	{//arr는 번호 조합이 들어있는 배열
 		int start = Integer.parseInt(arr[0]);
 		
 		for(int i=0; i<arr.length; i++)
