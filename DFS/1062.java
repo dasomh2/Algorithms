@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Main {
 
+	//2:00~
+
 	static ArrayList<String> list = new ArrayList<>();
 	static int N, K, word, max;
 	static boolean[] alpha = new boolean[26];
@@ -77,17 +79,16 @@ public class Main {
 			System.out.println(0);
 			return;
 		}
-        
-        if(word == 0)
-        {
-            System.out.println(check());
-            return;
-        }
+		if(word == 0)
+        	{
+            		System.out.println(check());
+            		return;
+        	}
 	
-	for(int i=1; i<26; i++)
-		recur(i, 1);
+		for(int i=1; i<26; i++)
+			recur(i, 1);
 		
-	System.out.println(max);
-	sc.close();
+		System.out.println(max);
+		sc.close();
 	}
 }
