@@ -6,7 +6,6 @@ import java.util.StringTokenizer;
 public class Main {
 
 	static int N,M,max;
-	static boolean flag = false;
 	static int[] square[];
 
 	public static void main(String[] args) throws IOException {
