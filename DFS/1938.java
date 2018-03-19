@@ -4,10 +4,8 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-	//12:30~
 	static int N ,min=200001, bx, by, bt, ex, ey, et ,cnt;
 	static char[] map[];
-	static int[] dist[], dx= {-1,0,1,0}, dy = {0,1,0,-1};
 	static Point E, B;
 	static boolean flag = false;
 	static boolean[] visit[][];
@@ -19,7 +17,6 @@ public class Main {
 		N = Integer.parseInt(br.readLine());
 		map = new char[N][N];
 		visit = new boolean[N][N][2];
-		dist = new int[N][N];
 
 		int cnt_E=0, cnt_B=0;
 
