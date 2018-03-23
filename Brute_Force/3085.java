@@ -6,7 +6,6 @@ public class Main {
 
 	static int N, max;
 	static char[] candy[];
-	static boolean[] visit[];
 	static Point[] candidate = new Point[2];
 	static int[] dx = {0,1}, dy = {1,0};
 
@@ -15,14 +14,11 @@ public class Main {
 		N = Integer.parseInt(br.readLine());
 
 		candy = new char[N][N];
-		visit = new boolean[N][N];
 
 		for(int i=0; i<N; i++) {
-			String s = br.readLine();
-			for(int j=0; j<N; j++) {
-				candy[i][j] = s.charAt(j);
-			}
+			candy[i] = br.readLine().toCharArray();
 		}
+		
 		for(int i=0; i<N; i++) {
 			for(int j=0; j<N; j++) {
 				candidate[0] = new Point(i,j);
@@ -38,18 +34,20 @@ public class Main {
 			for(int i=0; i<N; i++) {
 				for(int j=0; j<N; j++) {
 					for(int k=0; k<2; k++) {
-						max = Math.max(max,find(i,j,k));	
+						max = Math.max(max,find(i,j,k));
+						
 					}
 				}
 			}
 			swap();
 			return;
 		}
+
 		for(int i=0; i<2; i++) {
 			int nx = x + dx[i];
 			int ny = y + dy[i];
 
-			if(nx<0 || ny<0 || nx>N-1 || ny>N-1) continue;
+			if(!range(nx,ny)) continue;
 
 			candidate[1] = new Point(nx,ny);
 			pick(x, y, cnt+1);
@@ -69,9 +67,7 @@ public class Main {
 				nx = nx + dx[dir];
 				ny = ny + dy[dir];
 				
-				if(nx<0 || ny<0 || nx>N-1 || ny>N-1) {
-					break;
-				}
+				if(!range(nx,ny)) break;
 			}
 		}
 		return count;
@@ -83,6 +79,11 @@ public class Main {
 		char tmp = candy[p1.x][p1.y];
 		candy[p1.x][p1.y] = candy[p2.x][p2.y];
 		candy[p2.x][p2.y] = tmp;
+	}
+	private static boolean range(int x, int y) {
+		if(x<0 || y<0 || x>N-1 || y>N-1)
+			return false;
+		return true;
 	}
 }
 class Point {
