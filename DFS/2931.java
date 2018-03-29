@@ -69,39 +69,39 @@ public class Main {
 		
 		switch(map[x][y]) {
 		case '|':
-			if(d==0)			DFS(x,y,2,depth);
+			if(d==0)	DFS(x,y,2,depth);
 			else if(d==2)	DFS(x,y,0,depth);
 			break;
 			
 		case '-':
-			if(d==3)			DFS(x,y,1,depth);
+			if(d==3)	DFS(x,y,1,depth);
 			else if(d==1)	DFS(x,y,3,depth);
 			break;
 			
 		case '+':
-			if(d==0)			DFS(x,y,2,depth);
+			if(d==0)	DFS(x,y,2,depth);
 			else if(d==1)	DFS(x,y,3,depth);
 			else if(d==2)	DFS(x,y,0,depth);
 			else if(d==3)	DFS(x,y,1,depth);
 			break;
 			
 		case '1':
-			if(d==1)			DFS(x,y,2,depth);
+			if(d==1)	DFS(x,y,2,depth);
 			else if(d==2)	DFS(x,y,1,depth);
 			break;
 			
 		case '2':
-			if(d==0)			DFS(x,y,1,depth);
+			if(d==0)	DFS(x,y,1,depth);
 			else if(d==1)	DFS(x,y,0,depth);
 			break;
 			
 		case '3':
-			if(d==0)			DFS(x,y,3,depth);
+			if(d==0)	DFS(x,y,3,depth);
 			else if(d==3)	DFS(x,y,0,depth);
 			break;
 			
 		case '4':
-			if(d==3)			DFS(x,y,2,depth);
+			if(d==3)	DFS(x,y,2,depth);
 			else if(d==2)	DFS(x,y,3,depth);
 			break;
 		}
