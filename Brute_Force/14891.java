@@ -99,7 +99,7 @@ public class Main {
 				spin(-1, q1);
 			}
 			break;
-		case 2://1번하고 3번봐야함 
+		case 2: 
 			if(dir == 1) {
 				if(arr[0] != arr[1]) {
 					spin(-1, q1);
@@ -125,7 +125,7 @@ public class Main {
 				spin(-1, q2);
 			}
 			break;
-		case 3://2번하고 4번 봐야함 
+		case 3:
 			if(dir == 1) {
 				if(arr[4] != arr[5]) {
 					spin(-1, q4);
