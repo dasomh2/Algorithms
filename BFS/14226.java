@@ -16,7 +16,7 @@ public class Main {
 	private static int bfs_emoji() {
 		int time = 0;
 		Queue<Point> q = new LinkedList<>();
-		boolean[][] visit = new boolean[1001][1001];
+		boolean[][] visit = new boolean[2001][2001];
 		visit[1][0] = true;//visit[screen][clip]
 		q.add(new Point(1,0));
 
